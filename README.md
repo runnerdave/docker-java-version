@@ -4,28 +4,28 @@ Make sure you have docker installed.
 
 Clone this repo.
 
-Navigate to the folder you want, for example:
+Navigate to the java source folder:
 
-```bash
-$ cd java9
+```
+$ cd java-src/
 ```
 
-* build the local image:
+* build the local image for the target java version you want:
 
 ```bash
-$ docker build -t java-app .
+$ docker build -t java-img-9 -f ../docker-java9/Dockerfile .
 ```
 
 * run the container
 
 ```bash
-$ docker container run -it --rm --name java9 java-app
+$ docker container run -it --rm --name java-ctnr-9 java-img-9
 ```
 
 * run the container in interactive mode and play with jshell
 
 ```bash
-$ docker container run -it --rm --name java9 java-app /bin/sh
+$ docker container run -it --rm --name java-ctnr-9 java-img-9 /bin/sh
 
 # jshell
 May 22, 2018 9:51:20 AM java.util.prefs.FileSystemPreferences$1 run
@@ -33,5 +33,5 @@ INFO: Created user preferences directory.
 |  Welcome to JShell -- Version 9.0.4
 |  For an introduction type: /help intro
 
-jshell> 
+jshell>
 ```

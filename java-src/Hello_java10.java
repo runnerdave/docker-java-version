@@ -1,6 +1,6 @@
 import java.util.List;
 
-public class Hello {
+public class Hello_java10 {
     public static void main(String[] args) {
         System.out.println("Java 10 example: Local-Variable Type Inference");
         var numbers = List.of(1, 2, 3, 4, 5); // inferred value ArrayList<String>
